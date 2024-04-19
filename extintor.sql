@@ -1,5 +1,6 @@
 //Camilo Andres Mañosca Burbano
-Angie Michel Cardenas Belalcazar// 
+Angie Michel Cardenas Belalcazar
+Joisy Pamela Rodallega// 
 -- Tabla para los Extintores
 CREATE TABLE extintor (
     id integer unsigned PRIMARY KEY AUTO_INCREMENT,
