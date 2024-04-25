@@ -1,18 +1,6 @@
 //Camilo Andres Mañosca Burbano
 Angie Michel Cardenas Belalcazar
 Joisy Pamela Rodallega// 
--- Tabla para los Extintores
-CREATE TABLE extintor (
-    id integer unsigned PRIMARY KEY AUTO_INCREMENT,
-    numero_serie VARCHAR(50) unique,
-    tipo VARCHAR(10),
-    capacidad DECIMAL(2,1) unsigned,
-    fecha_inspeccion DATE,
-    idproveedor integer unsigned,
-    idsalon integer unsigned,
-    FOREIGN KEY (idproveedor) REFERENCES proveedor(id),
-    FOREIGN KEY (idsalon) REFERENCES salon(id)
-);
 
 -- Tabla para los Salones
 CREATE TABLE salon (
@@ -28,6 +16,19 @@ CREATE TABLE proveedor (
     nombre VARCHAR(100) unique,
     direccion VARCHAR(100),
     telefono VARCHAR(20)
+);
+
+-- Tabla para los Extintores
+CREATE TABLE extintor (
+    id integer unsigned PRIMARY KEY AUTO_INCREMENT,
+    numero_serie VARCHAR(50) unique,
+    tipo VARCHAR(10),
+    capacidad DECIMAL(2,1) unsigned,
+    fecha_inspeccion DATE,
+    idproveedor integer unsigned,
+    idsalon integer unsigned,
+    FOREIGN KEY (idproveedor) REFERENCES proveedor(id),
+    FOREIGN KEY (idsalon) REFERENCES salon(id)
 );
 
 -- Datos para la tabla "Extintor"
